@@ -37,7 +37,7 @@ dispatch_barrier_async(gcd_queue,^{
 
 等待线程结束
 
-```
+```swift
 dispatch_queue_t gcd_queue = dispatch_queue_create("com.huxn.gcd",DISPATCH_QUEUE_CONCURRENT);
 
 dispatch_queue_t gcd_queue1 = dispatch_get_global_queue(0,0);
@@ -62,7 +62,7 @@ dispatch_group_notify(group,dispatch_get_main_queue(),^{
 
 * lock
 
-```
+```swift
 // 信号数量必须大于0
 dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
 
@@ -83,7 +83,7 @@ dispatch_semaphore_signal(semaphore);
 
     * `@synchronized`
     
-        ```
+        ```swift
         @synchronized(self){
         // lock
         };
@@ -91,7 +91,7 @@ dispatch_semaphore_signal(semaphore);
 
     * `NSLock`
         
-        ```
+        ```swift
         NSLock *lock = [[NSLock alloc] init];
         [lock lock]; // 加锁
         // 期间其他线程无法访问
