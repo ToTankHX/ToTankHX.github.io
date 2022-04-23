@@ -103,5 +103,5 @@ theme: hexo-theme-lx
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/ToTankHX/ToTankHX.github.io.git
+  repo: git@github.com:ToTankHX/ToTankHX.github.io.git
   branch: master
